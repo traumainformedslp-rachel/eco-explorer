@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecological Systems &amp; Trauma Explorer</title>
+    <meta name="description" content="An interactive tool for mapping trauma across Bronfenbrenner's ecological systems and identifying effects on learning." />
+    <meta name="author" content="Rachel Terra Norton, MS, CCC-SLP" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+    <script>
+      (function(){
+        try {
+          var saved = localStorage.getItem('rtn-theme');
+          document.documentElement.setAttribute('data-theme', saved === 'dark' ? 'dark' : 'light');
+        } catch(e){ document.documentElement.setAttribute('data-theme', 'light'); }
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="rainbow-bar" aria-hidden="true" style="height:6px;width:100%;background:linear-gradient(90deg,#002051,#0a326a,#2b446e,#4d566d,#6b6b6f,#8a8678,#a9a373,#cac26d,#fdea45);position:fixed;top:0;left:0;right:0;z-index:9999;"></div>
+    <div id="root"></div>
+    <script type="module" src="./src/main.jsx"></script>
+  </body>
+</html>
