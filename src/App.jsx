@@ -14,7 +14,7 @@ styleTag.textContent = `
     transition: background 0.3s ease, color 0.3s ease;
     position: relative;
   }
-  :focus-visible { outline: 2px solid #2b446e !important; outline-offset: 3px; border-radius: 2px; }
+  :focus-visible { outline: 2px solid #6A1B9A !important; outline-offset: 3px; border-radius: 2px; }
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(8px); }
     to { opacity: 1; transform: translateY(0); }
@@ -32,7 +32,7 @@ styleTag.textContent = `
     transform: translateY(-1px);
     box-shadow: 0 3px 12px rgba(0,0,0,0.3);
   }
-  ::selection { background: rgba(43,68,110,0.2); color: inherit; }
+  ::selection { background: rgba(106,27,154,0.2); color: inherit; }
   input:focus, textarea:focus { outline: none; }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
@@ -53,16 +53,16 @@ if (!document.querySelector("[data-trauma-explorer-styles]")) {
 
 const T = {
   dark: {
-    bg: "#0d1510", card: "#1a2418", border: "#2b3326", inputBg: "#0d1510",
-    text: "#e8e4d8", textMuted: "#a9a373", textDim: "#6b6b6f", textSub: "#a9a373",
-    accent: "#cac26d", btnBg: "#1a2418",
-    ringCenter: "#1a2418", ringStroke: "#2b3326", ringPersonFill: "#e8e4d8", ringPersonLabel: "#6b6b6f",
+    bg: "#1a0e20", card: "#2a1838", border: "#3a2848", inputBg: "#1a0e20",
+    text: "#f0e8f5", textMuted: "#c8a0d8", textDim: "#8a6aa0", textSub: "#c8a0d8",
+    accent: "#FBC02D", btnBg: "#2a1838",
+    ringCenter: "#2a1838", ringStroke: "#3a2848", ringPersonFill: "#f0e8f5", ringPersonLabel: "#8a6aa0",
   },
   light: {
-    bg: "#fafaf5", card: "#ffffff", border: "#e0ddd0", inputBg: "#f7f6f0",
-    text: "#1a1a2a", textMuted: "#4d566d", textDim: "#8a8678", textSub: "#4d566d",
-    accent: "#2b446e", btnBg: "#f7f6f0",
-    ringCenter: "#f7f6f0", ringStroke: "#e0ddd0", ringPersonFill: "#1a1a2a", ringPersonLabel: "#8a8678",
+    bg: "#faf5f8", card: "#ffffff", border: "#e0d0e8", inputBg: "#f8f0f5",
+    text: "#1a1a2a", textMuted: "#6A1B9A", textDim: "#9C27B0", textSub: "#6A1B9A",
+    accent: "#6A1B9A", btnBg: "#f8f0f5",
+    ringCenter: "#f8f0f5", ringStroke: "#e0d0e8", ringPersonFill: "#1a1a2a", ringPersonLabel: "#9C27B0",
   },
 };
 
@@ -77,7 +77,7 @@ const SYSTEM_LEVELS = [
     subtitle: "Immediate, direct environments",
     description:
       "The closest layer — direct, face-to-face settings and relationships that shape daily lived experience.",
-    color: { bg: "#0a1828", accent: "#0a326a", text: "#c8d8e8", light: "#0a326a15", ring: "#0a326a", dark: "#061020" },
+    color: { bg: "#1a0830", accent: "#6A1B9A", text: "#e8d0f8", light: "#6A1B9A15", ring: "#6A1B9A", dark: "#120520" },
     settings: [
       {
         id: "home_family",
@@ -161,7 +161,7 @@ const SYSTEM_LEVELS = [
     subtitle: "Interactions between microsystems",
     description:
       "The connections and conflicts between the individual's immediate settings. Trauma arises when microsystems clash, fail to communicate, or compound harm.",
-    color: { bg: "#1a2030", accent: "#4d566d", text: "#d0d4de", light: "#4d566d15", ring: "#4d566d", dark: "#121828" },
+    color: { bg: "#200e28", accent: "#9C27B0", text: "#f0d8f8", light: "#9C27B015", ring: "#9C27B0", dark: "#180820" },
     settings: [
       {
         id: "home_school",
@@ -217,7 +217,7 @@ const SYSTEM_LEVELS = [
     subtitle: "Indirect environmental influences",
     description:
       "Settings the individual doesn't directly participate in, but whose decisions cascade down to affect them.",
-    color: { bg: "#1a2018", accent: "#8a8678", text: "#e0ddd0", light: "#8a867815", ring: "#8a8678", dark: "#121810" },
+    color: { bg: "#1a1008", accent: "#E64A19", text: "#f8e0d0", light: "#E64A1915", ring: "#E64A19", dark: "#140a04" },
     settings: [
       {
         id: "parent_workplace",
@@ -278,7 +278,7 @@ const SYSTEM_LEVELS = [
     subtitle: "Cultural, societal & ideological context",
     description:
       "The outermost layer — cultural blueprints, societal structures, political systems, and dominant ideologies that shape all other systems.",
-    color: { bg: "#1e1e10", accent: "#cac26d", text: "#f0eeda", light: "#cac26d15", ring: "#cac26d", dark: "#161608" },
+    color: { bg: "#1a1808", accent: "#FBC02D", text: "#f8f0d8", light: "#FBC02D15", ring: "#FBC02D", dark: "#141004" },
     settings: [
       {
         id: "racism_struct",
@@ -353,8 +353,8 @@ const SYSTEM_LEVELS = [
 
 const LEARNING_AREAS = [
   {
-    id: "cognitive", label: "Cognitive Impacts", icon: "\u{1F9E0}", color: "#002051",
-    bg: "#0a1420", text: "#c0d0e0", border: "#00205133",
+    id: "cognitive", label: "Cognitive Impacts", icon: "\u{1F9E0}", color: "#4B0082",
+    bg: "#1a0830", text: "#e0d0f8", border: "#4B008233",
     effects: [
       { id: "cog_memory", label: "Reduced working memory capacity" },
       { id: "cog_attention", label: "Impaired attention & concentration" },
@@ -366,8 +366,8 @@ const LEARNING_AREAS = [
     citation: "Gray, 2019; Stillerman, 2013; van der Kolk, 2014",
   },
   {
-    id: "language", label: "Language & Communication", icon: "\u{1F4AC}", color: "#0a326a",
-    bg: "#0a1828", text: "#c8d8e8", border: "#0a326a33",
+    id: "language", label: "Language & Communication", icon: "\u{1F4AC}", color: "#6A1B9A",
+    bg: "#1a0830", text: "#e8d0f8", border: "#6A1B9A33",
     effects: [
       { id: "lang_recept", label: "Impaired receptive language processing" },
       { id: "lang_express", label: "Reduced expressive language & vocabulary" },
@@ -379,8 +379,8 @@ const LEARNING_AREAS = [
     citation: "Gray, 2019; NCTSN, 2018",
   },
   {
-    id: "behavior", label: "Behavior & Self-Regulation", icon: "⚖️", color: "#6b6b6f",
-    bg: "#1a1a1e", text: "#d8d8dc", border: "#6b6b6f33",
+    id: "behavior", label: "Behavior & Self-Regulation", icon: "⚖️", color: "#D81B60",
+    bg: "#200810", text: "#f8d0e0", border: "#D81B6033",
     effects: [
       { id: "beh_aggress", label: "Aggression & externalizing behaviors" },
       { id: "beh_impuls", label: "Impulsivity & risk-taking" },
@@ -392,8 +392,8 @@ const LEARNING_AREAS = [
     citation: "Gray, 2019; Stillerman, 2013; Perry, 2006",
   },
   {
-    id: "relationships", label: "Relationships & Social Skills", icon: "\u{1F91D}", color: "#a9a373",
-    bg: "#1e1e14", text: "#e8e6d8", border: "#a9a37333",
+    id: "relationships", label: "Relationships & Social Skills", icon: "\u{1F91D}", color: "#E64A19",
+    bg: "#1a1008", text: "#f8e0d0", border: "#E64A1933",
     effects: [
       { id: "rel_friends", label: "Difficulty forming & maintaining friendships" },
       { id: "rel_trust", label: "Mistrust of adults & authority figures" },
@@ -406,8 +406,8 @@ const LEARNING_AREAS = [
     citation: "Gray, 2019; Blaustein & Kinniburgh, 2018",
   },
   {
-    id: "academic", label: "Academic Outcomes", icon: "\u{1F393}", color: "#cac26d",
-    bg: "#1e1e10", text: "#f0eeda", border: "#cac26d33",
+    id: "academic", label: "Academic Outcomes", icon: "\u{1F393}", color: "#F57C00",
+    bg: "#1a1408", text: "#f8e8d0", border: "#F57C0033",
     effects: [
       { id: "acad_absent", label: "Chronic absenteeism & school avoidance" },
       { id: "acad_engage", label: "Reduced effort, motivation, & engagement" },
@@ -420,8 +420,8 @@ const LEARNING_AREAS = [
     citation: "Gray, 2019; Stillerman, 2013; NCTSN, 2018",
   },
   {
-    id: "somatic", label: "Somatic & Physiological", icon: "\u{1FAC0}", color: "#fdea45",
-    bg: "#1e1e10", text: "#f8f4d0", border: "#fdea4533",
+    id: "somatic", label: "Somatic & Physiological", icon: "\u{1FAC0}", color: "#FBC02D",
+    bg: "#1a1808", text: "#f8f0d8", border: "#FBC02D33",
     effects: [
       { id: "som_pain", label: "Chronic headaches, stomachaches, unexplained pain" },
       { id: "som_sleep", label: "Sleep disturbances — insomnia, nightmares, hypersomnia" },
@@ -445,22 +445,22 @@ function sysColor(sc, dark) {
       cardBg: sc.light,         // e.g. "#0a326a15"
       cardBgNone: "#111",
       border: sc.ring + "55",
-      borderNone: "#2b3326",
+      borderNone: "#3a2848",
       accent: sc.accent,
       ring: sc.ring,
       text: sc.text,
-      labelText: "#e8e4d8",
+      labelText: "#f0e8f5",
       descText: "#6b8886",
       countBadgeBg: sc.ring,
       countBadgeText: "#0a0a0a",
       tagBg: sc.light,
       tagText: sc.accent,
       tagBorder: sc.ring + "22",
-      checkBorderOff: "#2b3326",
+      checkBorderOff: "#3a2848",
       checkBgOn: sc.ring,
       checkTextOn: "#0a0a0a",
       traumaLabelOn: sc.text,
-      traumaLabelOff: "#a9a373",
+      traumaLabelOff: "#c8a0d8",
     };
   }
   return {
@@ -511,8 +511,8 @@ function Chev({ open, dark }) {
 function ThemeToggle({ dark, toggle }) {
   return (
     <button onClick={toggle} style={{
-      padding: "6px 12px", borderRadius: 20, border: `1.5px solid ${dark ? "#2b3326" : "#ebebeb"}`,
-      background: dark ? "#1a2418" : "#f0f0f0", color: dark ? "#e8e4d8" : "#0f1419",
+      padding: "6px 12px", borderRadius: 20, border: `1.5px solid ${dark ? "#3a2848" : "#ebebeb"}`,
+      background: dark ? "#2a1838" : "#f0f0f0", color: dark ? "#f0e8f5" : "#0f1419",
       fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer",
       display: "flex", alignItems: "center", gap: 6,
     }}>
@@ -527,10 +527,10 @@ function InteractiveRings({ activeLevel, setActiveLevel, selections, dark }) {
   const t = dark ? T.dark : T.light;
   const cx = 260, cy = 260;
   const rings = [
-    { id: "macro", innerR: 200, outerR: 254, label: "Macrosystem", color: "#cac26d", tc: "#1e1e10" },
-    { id: "exo", innerR: 146, outerR: 196, label: "Exosystem", color: "#8a8678", tc: "#1a2018" },
-    { id: "meso", innerR: 92, outerR: 142, label: "Mesosystem", color: "#4d566d", tc: "#ffffff" },
-    { id: "micro", innerR: 38, outerR: 88, label: "Microsystem", color: "#0a326a", tc: "#c8d8e8" },
+    { id: "macro", innerR: 200, outerR: 254, label: "Macrosystem", color: "#FBC02D", tc: "#1a1808" },
+    { id: "exo", innerR: 146, outerR: 196, label: "Exosystem", color: "#E64A19", tc: "#ffffff" },
+    { id: "meso", innerR: 92, outerR: 142, label: "Mesosystem", color: "#9C27B0", tc: "#ffffff" },
+    { id: "micro", innerR: 38, outerR: 88, label: "Microsystem", color: "#6A1B9A", tc: "#e8d0f8" },
   ];
   const sub = { micro: "Immediate", meso: "Connections", exo: "Indirect", macro: "Cultural/Societal" };
   const arc = (iR, oR) =>
@@ -616,15 +616,15 @@ function LearningDomain({ area, selectedEffects, onToggleEffect, dark }) {
   const ct = area.effects.filter((e) => selectedEffects.includes(e.id)).length;
   const hasAny = ct > 0;
 
-  const cardBg = dark ? (hasAny ? area.bg : "#1a2418") : (hasAny ? "#fff" : "#fff");
+  const cardBg = dark ? (hasAny ? area.bg : "#2a1838") : (hasAny ? "#fff" : "#fff");
   const cardBorder = dark
     ? `1.5px solid ${hasAny ? area.color + "44" : area.color + "22"}`
     : `1.5px solid ${hasAny ? area.color + "40" : "#ebebeb"}`;
   const cardShadow = hasAny ? `0 0 30px ${area.color}10` : "none";
 
-  const chipUnselBg = dark ? "#1a2418" : "#f5f5f5";
-  const chipUnselColor = dark ? "#a9a373" : "#0f1419";
-  const chipUnselBorder = dark ? "#2b3326" : "#ebebeb";
+  const chipUnselBg = dark ? "#2a1838" : "#f5f5f5";
+  const chipUnselColor = dark ? "#c8a0d8" : "#0f1419";
+  const chipUnselBorder = dark ? "#3a2848" : "#ebebeb";
   const chipSelColor = dark ? "#0a0a0a" : "#fff";
   const chipCheckBg = dark ? "rgba(0,0,0,0.15)" : "rgba(255,255,255,0.25)";
 
@@ -647,7 +647,7 @@ function LearningDomain({ area, selectedEffects, onToggleEffect, dark }) {
         <Chev open={open} dark={dark} />
       </button>
       {open && (
-        <div style={{ padding: "0 18px 18px", borderTop: `1px solid ${dark ? (hasAny ? area.border : "#2b3326") : (hasAny ? area.color + "20" : "#ebebeb")}`, animation: "fadeIn 0.2s ease" }}>
+        <div style={{ padding: "0 18px 18px", borderTop: `1px solid ${dark ? (hasAny ? area.border : "#3a2848") : (hasAny ? area.color + "20" : "#ebebeb")}`, animation: "fadeIn 0.2s ease" }}>
           <p style={{ fontSize: 12, color: t.textMuted, margin: "12px 0 10px", fontWeight: 500 }}>Select specific effects relevant to your client population:</p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
             {area.effects.map((effect) => {
@@ -751,7 +751,7 @@ export default function App() {
         }).filter(Boolean).join("")
       : '<p style="font-size:12px;color:#999;font-style:italic;">None selected.</p>';
 
-    const html = `<!DOCTYPE html><html><head><meta charset="utf-8"><title>Trauma Explorer — ${esc(studentName) || "Submission"}</title><style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap');*{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans', sans-serif;color:#1A1A2E}@media print{.np{display:none!important}@page{margin:.5in .6in;size:letter}}</style></head><body><div style="max-width:740px;margin:0 auto;padding:16px;"><div style="background:#1a1a1a;padding:20px 24px;border-radius:10px;margin-bottom:16px;color:#fff;"><div style="font-family:'DM Sans', sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;opacity:.5;">Trauma-Informed Practice</div><div style="font-size:22px;font-weight:800;margin:4px 0;">Ecological Systems & Trauma Explorer</div></div><table style="width:100%;border-collapse:collapse;margin-bottom:14px;font-size:12px;"><tr><td style="padding:5px 0;border-bottom:1px solid #ddd;"><strong>Name:</strong> ${esc(studentName) || "___________________________"}</td><td style="padding:5px 0;border-bottom:1px solid #ddd;text-align:right;"><strong>Date:</strong> ${esc(studentDate)}</td></tr></table><div style="font-size:16px;font-weight:800;color:#333;margin-bottom:10px;">Trauma Across Ecological Systems</div>${sysSec || '<p style="font-size:12px;color:#999;">No selections.</p>'}<div style="font-size:16px;font-weight:800;color:#333;margin:18px 0 10px;">Learning Effects Identified</div>${lSec}<div style="margin-top:18px;padding:12px 16px;background:#f5f5f5;border-radius:6px;border:1px solid #ddd;font-size:10px;color:#666;line-height:1.7;"><strong style="font-size:11px;color:#333;">References</strong><br>Blaustein & Kinniburgh (2018). Guilford. · Bronfenbrenner (1979). Harvard UP. · Gray (2019). Springer. · NCTSN (2018). · Perry (2006). Guilford. · SAMHSA (2014). HHS. · Stillerman (2013). IL ACEs. · van der Kolk (2014). Viking.</div><div class="np" style="text-align:center;margin-top:24px;"><button onclick="window.print()" style="background:#2b446e;color:#fff;border:none;padding:10px 28px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;">Print / Save as PDF</button></div></div></body></html>`;
+    const html = `<!DOCTYPE html><html><head><meta charset="utf-8"><title>Trauma Explorer — ${esc(studentName) || "Submission"}</title><style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap');*{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans', sans-serif;color:#1A1A2E}@media print{.np{display:none!important}@page{margin:.5in .6in;size:letter}}</style></head><body><div style="max-width:740px;margin:0 auto;padding:16px;"><div style="background:#1a1a1a;padding:20px 24px;border-radius:10px;margin-bottom:16px;color:#fff;"><div style="font-family:'DM Sans', sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;opacity:.5;">Trauma-Informed Practice</div><div style="font-size:22px;font-weight:800;margin:4px 0;">Ecological Systems & Trauma Explorer</div></div><table style="width:100%;border-collapse:collapse;margin-bottom:14px;font-size:12px;"><tr><td style="padding:5px 0;border-bottom:1px solid #ddd;"><strong>Name:</strong> ${esc(studentName) || "___________________________"}</td><td style="padding:5px 0;border-bottom:1px solid #ddd;text-align:right;"><strong>Date:</strong> ${esc(studentDate)}</td></tr></table><div style="font-size:16px;font-weight:800;color:#333;margin-bottom:10px;">Trauma Across Ecological Systems</div>${sysSec || '<p style="font-size:12px;color:#999;">No selections.</p>'}<div style="font-size:16px;font-weight:800;color:#333;margin:18px 0 10px;">Learning Effects Identified</div>${lSec}<div style="margin-top:18px;padding:12px 16px;background:#f5f5f5;border-radius:6px;border:1px solid #ddd;font-size:10px;color:#666;line-height:1.7;"><strong style="font-size:11px;color:#333;">References</strong><br>Blaustein & Kinniburgh (2018). Guilford. · Bronfenbrenner (1979). Harvard UP. · Gray (2019). Springer. · NCTSN (2018). · Perry (2006). Guilford. · SAMHSA (2014). HHS. · Stillerman (2013). IL ACEs. · van der Kolk (2014). Viking.</div><div class="np" style="text-align:center;margin-top:24px;"><button onclick="window.print()" style="background:#6A1B9A;color:#fff;border:none;padding:10px 28px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;">Print / Save as PDF</button></div></div></body></html>`;
 
     const w = window.open("", "_blank");
     if (w) { w.document.write(html); w.document.close(); setTimeout(() => w.print(), 600); }
@@ -762,9 +762,9 @@ export default function App() {
     border: a ? "none" : `1px solid ${t.border}`,
     fontSize: 12, fontWeight: a ? 700 : 400, cursor: "pointer",
     fontFamily: "'DM Sans', sans-serif", transition: "all 0.2s",
-    background: a ? "#2b446e" : "transparent",
+    background: a ? "#6A1B9A" : "transparent",
     color: a ? "#fff" : t.textDim,
-    boxShadow: a ? "0 3px 12px rgba(43,68,110,0.30)" : "none",
+    boxShadow: a ? "0 3px 12px rgba(106,27,154,0.30)" : "none",
   });
 
   const cs = {
@@ -775,7 +775,7 @@ export default function App() {
   return (
     <div style={{ minHeight: "100vh", backgroundColor: t.bg, transition: "background 0.3s" }}>
       {/* Header */}
-      <header style={{ padding: "28px 16px 24px", textAlign: "center", borderBottom: `1px solid ${dark ? "#2b3326" : "#ebebeb"}` }}>
+      <header style={{ padding: "28px 16px 24px", textAlign: "center", borderBottom: `1px solid ${dark ? "#3a2848" : "#ebebeb"}` }}>
         <div style={{ maxWidth: 580, margin: "0 auto" }}>
           <p style={{ fontFamily: "'DM Sans', sans-serif", color: t.textDim, fontSize: 10, fontWeight: 700, letterSpacing: 4, textTransform: "uppercase", margin: "0 0 6px" }}>TRAUMA-INFORMED PRACTICE</p>
           <h1 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "clamp(26px,5vw,38px)", fontWeight: 700, color: t.text, margin: "0 0 8px", lineHeight: 1.1, letterSpacing: "-0.02em" }}>Ecological Systems &amp; Trauma Explorer</h1>
@@ -819,11 +819,11 @@ export default function App() {
                       <span style={{ fontSize: 12, fontWeight: 700, color: c.accent, fontFamily: "'DM Sans', sans-serif" }}>{selections[currentSystem.id].traumas.length} selected</span>
                     </div>
                   )}
-                  <p style={{ fontSize: 13, fontWeight: 600, color: dark ? "#a9a373" : "#4a5560", marginBottom: 8 }}>Expand each setting to identify specific traumas:</p>
+                  <p style={{ fontSize: 13, fontWeight: 600, color: dark ? "#c8a0d8" : "#4a5560", marginBottom: 8 }}>Expand each setting to identify specific traumas:</p>
                   {currentSystem.settings.map((s) => <SettingAccordion key={s.id} setting={s} sc={currentSystem.color} sel={selections[currentSystem.id].traumas} onToggle={(tid) => toggleTrauma(currentSystem.id, tid)} dark={dark} />)}
                   <div style={{ marginTop: 12 }}>
-                    <label htmlFor={`n-${currentSystem.id}`} style={{ fontSize: 13, fontWeight: 600, display: "block", marginBottom: 5, color: dark ? "#a9a373" : "#4a5560" }}>Clinical Reflection <span style={{ fontWeight: 400, color: t.textDim }}>(optional)</span></label>
-                    <textarea id={`n-${currentSystem.id}`} placeholder="How does your client population experience trauma at this level?" value={selections[currentSystem.id].notes} onChange={(e) => updateNotes(currentSystem.id, e.target.value)} rows={3} style={{ width: "100%", padding: "9px 12px", borderRadius: 8, border: `1.5px solid ${t.border}`, fontSize: 12, fontFamily: "inherit", resize: "vertical", lineHeight: 1.5, color: t.text, backgroundColor: t.inputBg, boxSizing: "border-box", outline: "none" }} onFocus={(e) => (e.target.style.borderColor = c.ring)} onBlur={(e) => (e.target.style.borderColor = dark ? "#2b3326" : "#ebebeb")} />
+                    <label htmlFor={`n-${currentSystem.id}`} style={{ fontSize: 13, fontWeight: 600, display: "block", marginBottom: 5, color: dark ? "#c8a0d8" : "#4a5560" }}>Clinical Reflection <span style={{ fontWeight: 400, color: t.textDim }}>(optional)</span></label>
+                    <textarea id={`n-${currentSystem.id}`} placeholder="How does your client population experience trauma at this level?" value={selections[currentSystem.id].notes} onChange={(e) => updateNotes(currentSystem.id, e.target.value)} rows={3} style={{ width: "100%", padding: "9px 12px", borderRadius: 8, border: `1.5px solid ${t.border}`, fontSize: 12, fontFamily: "inherit", resize: "vertical", lineHeight: 1.5, color: t.text, backgroundColor: t.inputBg, boxSizing: "border-box", outline: "none" }} onFocus={(e) => (e.target.style.borderColor = c.ring)} onBlur={(e) => (e.target.style.borderColor = dark ? "#3a2848" : "#ebebeb")} />
                   </div>
                 </div>
               );
@@ -923,14 +923,14 @@ export default function App() {
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 12 }}>
                 <div style={{ flex: "1 1 200px" }}>
                   <label htmlFor="sn" style={{ fontSize: 10, fontWeight: 700, display: "block", marginBottom: 3, color: t.textMuted, fontFamily: "'DM Sans', sans-serif", letterSpacing: 1 }}>FULL NAME</label>
-                  <input id="sn" type="text" placeholder="Your name" value={studentName} onChange={(e) => setStudentName(e.target.value)} style={{ width: "100%", padding: "8px 10px", borderRadius: 6, border: `1.5px solid ${t.border}`, fontSize: 12, fontFamily: "inherit", color: t.text, backgroundColor: t.inputBg, boxSizing: "border-box", outline: "none" }} onFocus={(e) => (e.target.style.borderColor = "#2b446e")} onBlur={(e) => (e.target.style.borderColor = dark ? "#2b3326" : "#ebebeb")} />
+                  <input id="sn" type="text" placeholder="Your name" value={studentName} onChange={(e) => setStudentName(e.target.value)} style={{ width: "100%", padding: "8px 10px", borderRadius: 6, border: `1.5px solid ${t.border}`, fontSize: 12, fontFamily: "inherit", color: t.text, backgroundColor: t.inputBg, boxSizing: "border-box", outline: "none" }} onFocus={(e) => (e.target.style.borderColor = "#6A1B9A")} onBlur={(e) => (e.target.style.borderColor = dark ? "#3a2848" : "#ebebeb")} />
                 </div>
                 <div style={{ flex: "1 1 140px" }}>
                   <label htmlFor="sd" style={{ fontSize: 10, fontWeight: 700, display: "block", marginBottom: 3, color: t.textMuted, fontFamily: "'DM Sans', sans-serif", letterSpacing: 1 }}>DATE</label>
-                  <input id="sd" type="text" value={studentDate} onChange={(e) => setStudentDate(e.target.value)} style={{ width: "100%", padding: "8px 10px", borderRadius: 6, border: `1.5px solid ${t.border}`, fontSize: 12, fontFamily: "inherit", color: t.text, backgroundColor: t.inputBg, boxSizing: "border-box", outline: "none" }} onFocus={(e) => (e.target.style.borderColor = "#2b446e")} onBlur={(e) => (e.target.style.borderColor = dark ? "#2b3326" : "#ebebeb")} />
+                  <input id="sd" type="text" value={studentDate} onChange={(e) => setStudentDate(e.target.value)} style={{ width: "100%", padding: "8px 10px", borderRadius: 6, border: `1.5px solid ${t.border}`, fontSize: 12, fontFamily: "inherit", color: t.text, backgroundColor: t.inputBg, boxSizing: "border-box", outline: "none" }} onFocus={(e) => (e.target.style.borderColor = "#6A1B9A")} onBlur={(e) => (e.target.style.borderColor = dark ? "#3a2848" : "#ebebeb")} />
                 </div>
               </div>
-              <button onClick={handlePrint} style={{ border: "none", borderRadius: 999, padding: "14px 28px", fontSize: 15, fontWeight: 700, cursor: "pointer", fontFamily: "inherit", background: "#2b446e", color: "#fff", width: "100%", textAlign: "center", letterSpacing: 1, textTransform: "uppercase", transition: "all 0.2s", boxShadow: "0 3px 14px rgba(43,68,110,0.30)" }}>{"\u{1F5A8}️"} Print / Save as PDF</button>
+              <button onClick={handlePrint} style={{ border: "none", borderRadius: 999, padding: "14px 28px", fontSize: 15, fontWeight: 700, cursor: "pointer", fontFamily: "inherit", background: "#6A1B9A", color: "#fff", width: "100%", textAlign: "center", letterSpacing: 1, textTransform: "uppercase", transition: "all 0.2s", boxShadow: "0 3px 14px rgba(106,27,154,0.30)" }}>{"\u{1F5A8}️"} Print / Save as PDF</button>
               <p style={{ fontSize: 9, color: t.textDim, margin: "6px 0 0", textAlign: "center", fontFamily: "'DM Sans', sans-serif" }}>Choose "Save as PDF" in print dialog to download.</p>
             </div>
           </>
