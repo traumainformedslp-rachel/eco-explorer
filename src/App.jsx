@@ -32,7 +32,7 @@ styleTag.textContent = `
     transform: translateY(-1px);
     box-shadow: 0 3px 12px rgba(0,0,0,0.3);
   }
-  ::selection { background: rgba(42,157,143,0.2); color: inherit; }
+  ::selection { background: rgba(43,68,110,0.2); color: inherit; }
   input:focus, textarea:focus { outline: none; }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
@@ -77,7 +77,7 @@ const SYSTEM_LEVELS = [
     subtitle: "Immediate, direct environments",
     description:
       "The closest layer — direct, face-to-face settings and relationships that shape daily lived experience.",
-    color: { bg: "#0C1520", accent: "#7EB8E0", text: "#DCF0FF", light: "#7EB8E015", ring: "#7EB8E0", dark: "#081018" },
+    color: { bg: "#0a1828", accent: "#0a326a", text: "#c8d8e8", light: "#0a326a15", ring: "#0a326a", dark: "#061020" },
     settings: [
       {
         id: "home_family",
@@ -161,7 +161,7 @@ const SYSTEM_LEVELS = [
     subtitle: "Interactions between microsystems",
     description:
       "The connections and conflicts between the individual's immediate settings. Trauma arises when microsystems clash, fail to communicate, or compound harm.",
-    color: { bg: "#140A1A", accent: "#9B59B6", text: "#EAD8F4", light: "#9B59B615", ring: "#9B59B6", dark: "#0E0612" },
+    color: { bg: "#1a2030", accent: "#4d566d", text: "#d0d4de", light: "#4d566d15", ring: "#4d566d", dark: "#121828" },
     settings: [
       {
         id: "home_school",
@@ -217,7 +217,7 @@ const SYSTEM_LEVELS = [
     subtitle: "Indirect environmental influences",
     description:
       "Settings the individual doesn't directly participate in, but whose decisions cascade down to affect them.",
-    color: { bg: "#081A10", accent: "#27AE60", text: "#D0F0DE", light: "#27AE6015", ring: "#27AE60", dark: "#051208" },
+    color: { bg: "#1a2018", accent: "#8a8678", text: "#e0ddd0", light: "#8a867815", ring: "#8a8678", dark: "#121810" },
     settings: [
       {
         id: "parent_workplace",
@@ -278,7 +278,7 @@ const SYSTEM_LEVELS = [
     subtitle: "Cultural, societal & ideological context",
     description:
       "The outermost layer — cultural blueprints, societal structures, political systems, and dominant ideologies that shape all other systems.",
-    color: { bg: "#1A1208", accent: "#E89B2D", text: "#F8ECD8", light: "#E89B2D15", ring: "#E89B2D", dark: "#120C04" },
+    color: { bg: "#1e1e10", accent: "#cac26d", text: "#f0eeda", light: "#cac26d15", ring: "#cac26d", dark: "#161608" },
     settings: [
       {
         id: "racism_struct",
@@ -353,8 +353,8 @@ const SYSTEM_LEVELS = [
 
 const LEARNING_AREAS = [
   {
-    id: "cognitive", label: "Cognitive Impacts", icon: "\u{1F9E0}", color: "#E63946",
-    bg: "#1A0A0A", text: "#F8E0E0", border: "#E6394633",
+    id: "cognitive", label: "Cognitive Impacts", icon: "\u{1F9E0}", color: "#002051",
+    bg: "#0a1420", text: "#c0d0e0", border: "#00205133",
     effects: [
       { id: "cog_memory", label: "Reduced working memory capacity" },
       { id: "cog_attention", label: "Impaired attention & concentration" },
@@ -366,8 +366,8 @@ const LEARNING_AREAS = [
     citation: "Gray, 2019; Stillerman, 2013; van der Kolk, 2014",
   },
   {
-    id: "language", label: "Language & Communication", icon: "\u{1F4AC}", color: "#7EB8E0",
-    bg: "#0C1520", text: "#DCF0FF", border: "#7EB8E033",
+    id: "language", label: "Language & Communication", icon: "\u{1F4AC}", color: "#0a326a",
+    bg: "#0a1828", text: "#c8d8e8", border: "#0a326a33",
     effects: [
       { id: "lang_recept", label: "Impaired receptive language processing" },
       { id: "lang_express", label: "Reduced expressive language & vocabulary" },
@@ -379,8 +379,8 @@ const LEARNING_AREAS = [
     citation: "Gray, 2019; NCTSN, 2018",
   },
   {
-    id: "behavior", label: "Behavior & Self-Regulation", icon: "⚖️", color: "#f4a78a",
-    bg: "#1a110e", text: "#fce8df", border: "#f4a78a33",
+    id: "behavior", label: "Behavior & Self-Regulation", icon: "⚖️", color: "#6b6b6f",
+    bg: "#1a1a1e", text: "#d8d8dc", border: "#6b6b6f33",
     effects: [
       { id: "beh_aggress", label: "Aggression & externalizing behaviors" },
       { id: "beh_impuls", label: "Impulsivity & risk-taking" },
@@ -392,8 +392,8 @@ const LEARNING_AREAS = [
     citation: "Gray, 2019; Stillerman, 2013; Perry, 2006",
   },
   {
-    id: "relationships", label: "Relationships & Social Skills", icon: "\u{1F91D}", color: "#f0d861",
-    bg: "#1a1808", text: "#FAF5D8", border: "#f0d86133",
+    id: "relationships", label: "Relationships & Social Skills", icon: "\u{1F91D}", color: "#a9a373",
+    bg: "#1e1e14", text: "#e8e6d8", border: "#a9a37333",
     effects: [
       { id: "rel_friends", label: "Difficulty forming & maintaining friendships" },
       { id: "rel_trust", label: "Mistrust of adults & authority figures" },
@@ -406,8 +406,8 @@ const LEARNING_AREAS = [
     citation: "Gray, 2019; Blaustein & Kinniburgh, 2018",
   },
   {
-    id: "academic", label: "Academic Outcomes", icon: "\u{1F393}", color: "#27ae60",
-    bg: "#081a10", text: "#D0F0DE", border: "#27ae6033",
+    id: "academic", label: "Academic Outcomes", icon: "\u{1F393}", color: "#cac26d",
+    bg: "#1e1e10", text: "#f0eeda", border: "#cac26d33",
     effects: [
       { id: "acad_absent", label: "Chronic absenteeism & school avoidance" },
       { id: "acad_engage", label: "Reduced effort, motivation, & engagement" },
@@ -420,8 +420,8 @@ const LEARNING_AREAS = [
     citation: "Gray, 2019; Stillerman, 2013; NCTSN, 2018",
   },
   {
-    id: "somatic", label: "Somatic & Physiological", icon: "\u{1FAC0}", color: "#9B59B6",
-    bg: "#140A1A", text: "#EAD8F4", border: "#9B59B633",
+    id: "somatic", label: "Somatic & Physiological", icon: "\u{1FAC0}", color: "#fdea45",
+    bg: "#1e1e10", text: "#f8f4d0", border: "#fdea4533",
     effects: [
       { id: "som_pain", label: "Chronic headaches, stomachaches, unexplained pain" },
       { id: "som_sleep", label: "Sleep disturbances — insomnia, nightmares, hypersomnia" },
@@ -442,14 +442,14 @@ const LEARNING_AREAS = [
 function sysColor(sc, dark) {
   if (dark) {
     return {
-      cardBg: sc.light,         // e.g. "#7EB8E015"
+      cardBg: sc.light,         // e.g. "#0a326a15"
       cardBgNone: "#111",
       border: sc.ring + "55",
       borderNone: "#2b3326",
       accent: sc.accent,
       ring: sc.ring,
       text: sc.text,
-      labelText: "#e0edec",
+      labelText: "#e8e4d8",
       descText: "#6b8886",
       countBadgeBg: sc.ring,
       countBadgeText: "#0a0a0a",
@@ -460,7 +460,7 @@ function sysColor(sc, dark) {
       checkBgOn: sc.ring,
       checkTextOn: "#0a0a0a",
       traumaLabelOn: sc.text,
-      traumaLabelOff: "#a3bfbd",
+      traumaLabelOff: "#a9a373",
     };
   }
   return {
@@ -512,7 +512,7 @@ function ThemeToggle({ dark, toggle }) {
   return (
     <button onClick={toggle} style={{
       padding: "6px 12px", borderRadius: 20, border: `1.5px solid ${dark ? "#2b3326" : "#ebebeb"}`,
-      background: dark ? "#142322" : "#f0f0f0", color: dark ? "#e0edec" : "#0f1419",
+      background: dark ? "#1a2418" : "#f0f0f0", color: dark ? "#e8e4d8" : "#0f1419",
       fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer",
       display: "flex", alignItems: "center", gap: 6,
     }}>
@@ -527,10 +527,10 @@ function InteractiveRings({ activeLevel, setActiveLevel, selections, dark }) {
   const t = dark ? T.dark : T.light;
   const cx = 260, cy = 260;
   const rings = [
-    { id: "macro", innerR: 200, outerR: 254, label: "Macrosystem", color: "#E89B2D", tc: "#1A1208" },
-    { id: "exo", innerR: 146, outerR: 196, label: "Exosystem", color: "#27AE60", tc: "#081A10" },
-    { id: "meso", innerR: 92, outerR: 142, label: "Mesosystem", color: "#9B59B6", tc: "#FFFFFF" },
-    { id: "micro", innerR: 38, outerR: 88, label: "Microsystem", color: "#7EB8E0", tc: "#0C1520" },
+    { id: "macro", innerR: 200, outerR: 254, label: "Macrosystem", color: "#cac26d", tc: "#1e1e10" },
+    { id: "exo", innerR: 146, outerR: 196, label: "Exosystem", color: "#8a8678", tc: "#1a2018" },
+    { id: "meso", innerR: 92, outerR: 142, label: "Mesosystem", color: "#4d566d", tc: "#ffffff" },
+    { id: "micro", innerR: 38, outerR: 88, label: "Microsystem", color: "#0a326a", tc: "#c8d8e8" },
   ];
   const sub = { micro: "Immediate", meso: "Connections", exo: "Indirect", macro: "Cultural/Societal" };
   const arc = (iR, oR) =>
@@ -616,14 +616,14 @@ function LearningDomain({ area, selectedEffects, onToggleEffect, dark }) {
   const ct = area.effects.filter((e) => selectedEffects.includes(e.id)).length;
   const hasAny = ct > 0;
 
-  const cardBg = dark ? (hasAny ? area.bg : "#142322") : (hasAny ? "#fff" : "#fff");
+  const cardBg = dark ? (hasAny ? area.bg : "#1a2418") : (hasAny ? "#fff" : "#fff");
   const cardBorder = dark
     ? `1.5px solid ${hasAny ? area.color + "44" : area.color + "22"}`
     : `1.5px solid ${hasAny ? area.color + "40" : "#ebebeb"}`;
   const cardShadow = hasAny ? `0 0 30px ${area.color}10` : "none";
 
-  const chipUnselBg = dark ? "#142322" : "#f5f5f5";
-  const chipUnselColor = dark ? "#a3bfbd" : "#0f1419";
+  const chipUnselBg = dark ? "#1a2418" : "#f5f5f5";
+  const chipUnselColor = dark ? "#a9a373" : "#0f1419";
   const chipUnselBorder = dark ? "#2b3326" : "#ebebeb";
   const chipSelColor = dark ? "#0a0a0a" : "#fff";
   const chipCheckBg = dark ? "rgba(0,0,0,0.15)" : "rgba(255,255,255,0.25)";
@@ -819,10 +819,10 @@ export default function App() {
                       <span style={{ fontSize: 12, fontWeight: 700, color: c.accent, fontFamily: "'DM Sans', sans-serif" }}>{selections[currentSystem.id].traumas.length} selected</span>
                     </div>
                   )}
-                  <p style={{ fontSize: 13, fontWeight: 600, color: dark ? "#a3bfbd" : "#4a5560", marginBottom: 8 }}>Expand each setting to identify specific traumas:</p>
+                  <p style={{ fontSize: 13, fontWeight: 600, color: dark ? "#a9a373" : "#4a5560", marginBottom: 8 }}>Expand each setting to identify specific traumas:</p>
                   {currentSystem.settings.map((s) => <SettingAccordion key={s.id} setting={s} sc={currentSystem.color} sel={selections[currentSystem.id].traumas} onToggle={(tid) => toggleTrauma(currentSystem.id, tid)} dark={dark} />)}
                   <div style={{ marginTop: 12 }}>
-                    <label htmlFor={`n-${currentSystem.id}`} style={{ fontSize: 13, fontWeight: 600, display: "block", marginBottom: 5, color: dark ? "#a3bfbd" : "#4a5560" }}>Clinical Reflection <span style={{ fontWeight: 400, color: t.textDim }}>(optional)</span></label>
+                    <label htmlFor={`n-${currentSystem.id}`} style={{ fontSize: 13, fontWeight: 600, display: "block", marginBottom: 5, color: dark ? "#a9a373" : "#4a5560" }}>Clinical Reflection <span style={{ fontWeight: 400, color: t.textDim }}>(optional)</span></label>
                     <textarea id={`n-${currentSystem.id}`} placeholder="How does your client population experience trauma at this level?" value={selections[currentSystem.id].notes} onChange={(e) => updateNotes(currentSystem.id, e.target.value)} rows={3} style={{ width: "100%", padding: "9px 12px", borderRadius: 8, border: `1.5px solid ${t.border}`, fontSize: 12, fontFamily: "inherit", resize: "vertical", lineHeight: 1.5, color: t.text, backgroundColor: t.inputBg, boxSizing: "border-box", outline: "none" }} onFocus={(e) => (e.target.style.borderColor = c.ring)} onBlur={(e) => (e.target.style.borderColor = dark ? "#2b3326" : "#ebebeb")} />
                   </div>
                 </div>
@@ -853,8 +853,8 @@ export default function App() {
         {/* -- SUMMARY VIEW -- */}
         {viewMode === "summary" && (
           <>
-            <div style={{ ...cs, marginBottom: 14, borderLeft: "4px solid #7EB8E0" }}>
-              <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 24, fontWeight: 700, margin: "0 0 4px", color: "#7EB8E0", letterSpacing: "-0.01em" }}>Your Ecological Trauma Map</h2>
+            <div style={{ ...cs, marginBottom: 14, borderLeft: `4px solid ${t.accent}` }}>
+              <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 24, fontWeight: 700, margin: "0 0 4px", color: t.accent, letterSpacing: "-0.01em" }}>Your Ecological Trauma Map</h2>
               <p style={{ fontSize: 13, color: t.textSub, margin: 0, lineHeight: 1.5 }}>Complete overview of trauma and learning effects identified.</p>
             </div>
             <div style={{ ...cs, padding: "16px 10px", marginBottom: 14, textAlign: "center" }}>
